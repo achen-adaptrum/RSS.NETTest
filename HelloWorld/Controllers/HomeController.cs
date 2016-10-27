@@ -31,17 +31,9 @@ namespace HelloWorld.Controllers
             //Creating a new contentList to hold all the content of each post
             List<String> contentList = new List<String>();
 
-            //Test SyndicationItem to check for methods
-            SyndicationItem test = new SyndicationItem();
-
             foreach (SyndicationItem post in feed.Items)
             {
                 postList.Add(post);
-
-                //Trying to remove the first and last character of the content
-                string postContentRaw = post.Content.ToString();
-                postContentRaw = postContentRaw.Substring(1, postContentRaw.Length - 2);
-                contentList.Add(postContentRaw);
             }
 
             return postList;
