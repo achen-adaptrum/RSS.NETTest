@@ -16,7 +16,7 @@
                     <div>
                         <h1>@post.Title.Text</h1>
                         <h3>Updated on @post.LastUpdatedTime</h3>
-                        <p>@post.Content.WriteTo()</p>
+                        <p>@Html.Raw(@post.Content.Text)</p>
                         
                         <br/>
                     </div>
